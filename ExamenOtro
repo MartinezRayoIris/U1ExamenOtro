@@ -1,0 +1,48 @@
+package examenotro;
+
+import java.util.Scanner;
+
+
+public class ExamenOtro {
+codi h = new codi();
+int k,ñ;
+Scanner leer=new Scanner(System.in);
+public void menu(){
+    do{
+System.out.println("Que deseas hacer");
+System.out.println("1. Ingresar datos");
+System.out.println("2. Mostrar resultados de restas");
+System.out.println("3. Salir");
+k=leer.nextInt();
+switch(ñ=k){
+    case 1: 
+        h.datos();
+        h.rec();
+        break;
+    case 2:
+       
+        if(h.arr==null){
+            System.out.println("Esta vacia, ingrese datos");
+            h.datos();
+        }else {
+            h.resta();
+            h.rec();
+        }
+        break;
+    case 3:
+        h.salir();
+        break;
+    default: 
+          System.out.println("Esa opcion no existe");  
+        h.rec();
+}
+
+}while(h.t==1);
+    }
+    
+    public static void main(String[] args) {
+       ExamenOtro p = new ExamenOtro();
+       p.menu();
+    }
+    
+}

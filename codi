@@ -1,0 +1,47 @@
+package examenotro;
+
+import java.util.Scanner;
+
+public class codi {
+  int[][] arr= new int[3][4]; 
+ //arr [0][0]=1,2,4,5,8;
+  int v,r,g,t,o;
+  Scanner leer=new Scanner(System.in);
+public void datos(){
+//System.out.println("Ingrese sus valores");
+for(int i=0;i<3;i++){
+for(int j=0;j<4;j++){
+    
+    System.out.println("Ingrese sus valores");
+   v=leer.nextInt(); 
+arr[i][j]=v;
+ 
+}
+System.out.println("***************************");
+}
+}
+public void resta(){
+for(int i=0;i<3;i++){
+    o=0;
+    for(int j=1;j<4;j++){
+r=arr[i][j];
+o=o-r;
+
+}
+    o=o+arr[0][0];
+    System.out.println("Su resultado de la fila "+i+"es:  "+o);
+}
+}
+public void salir(){
+System.exit(0);
+}
+public void rec(){
+System.out.println("¿Que desea hacer? 1.Menu 2.salir");
+     g=leer.nextInt();
+    if(g==1){
+    t=g;
+    }else{
+    System.exit(0);
+    }
+}
+}
